@@ -26,6 +26,11 @@
         </div>
         <h1>Teresita Borja</h1>
         <p class="intro">Una vida llena de historias, amor y momentos inolvidables.</p>
+        <div class="family-invite" id="family-invite" hidden>
+          <span class="family-label">INVITACIÓN ESPECIAL PARA</span>
+          <strong id="family-name">Familia invitada</strong>
+          <span class="family-passes" id="family-passes"></span>
+        </div>
         <a class="button button-dark" href="#celebracion">Descubrir invitación <span>↓</span></a>
         <div class="cover-rule"><i></i></div>
       </div>
@@ -78,8 +83,9 @@
       <button class="close" type="button" id="close-rsvp" aria-label="Cerrar">×</button>
       <p class="eyebrow">80 AÑOS DE TERESITA</p>
       <h2>Confirma tu asistencia</h2>
-      <label>Nombre y apellido
-        <input id="guest-name" name="name" required maxlength="90" placeholder="Tu nombre">
+      <p class="rsvp-family" id="rsvp-family"></p>
+      <label>Nombre de quien confirma
+        <input id="guest-name" name="name" required maxlength="90" placeholder="Nombre y apellido">
       </label>
       <label>¿Podrás acompañarnos?
         <select id="attendance" name="attendance" required>
@@ -87,11 +93,15 @@
           <option value="No podré asistir">Lamentablemente no podré asistir</option>
         </select>
       </label>
-      <label>¿Cuántas personas asistirán incluyéndote?
-        <select id="guests" name="guests">
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
-        </select>
-      </label>
+      <div class="guest-counts">
+        <label>Adultos
+          <select id="adult-count" name="adults"></select>
+        </label>
+        <label>Niños
+          <select id="child-count" name="children"></select>
+        </label>
+      </div>
+      <p class="capacity-note" id="capacity-note"></p>
       <button class="button button-red submit" type="submit">Enviar por WhatsApp ↗</button>
       <p class="small-note">Se abrirá WhatsApp con tu respuesta lista para enviar.</p>
     </form>
